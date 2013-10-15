@@ -56,7 +56,24 @@ Installation
 
 ### As a dependency via [clib](https://github.com/clibs/clib)
 
-`clib install thlorenz/gumbo-parser.c`
+    clib install thlorenz/gumbo-parser.c -o deps/gumbo-parser
+
+Then include it from a `main.c`:
+
+```C
+#include "deps/gumbo-parser/gumbo.h"
+
+int main() {
+  GumboOutput* output = gumbo_parse("<h1>Hello, World!</h1>");
+  [ ... ]
+}
+```
+
+Include gumbo-parser `.c` files when building:
+
+```
+gcc deps/gumbo-parser/*.c main.c -o main
+```
 
 ### Traditional Install
 
