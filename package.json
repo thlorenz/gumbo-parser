@@ -1,6 +1,6 @@
 {
   "name": "gumbo-parser",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Gumbo - A pure-C HTML5 parser, adapted to be installable via clib.",
   "directories": {
     "src": "src"
@@ -32,8 +32,7 @@
     "src/vector.c",
     "src/vector.h"
   ],
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git://github.com/thlorenz/gumbo-parser.git"
