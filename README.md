@@ -54,6 +54,12 @@ hoping to add them soon"):
 Installation
 ============
 
+### As a dependency via [clib](https://github.com/clibs/clib)
+
+`clib install thlorenz/gumbo-parser`
+
+### Traditional Install
+
 To build and install the library, issue the standard UNIX incantation from
 the root of the distribution:
 
