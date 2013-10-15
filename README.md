@@ -45,7 +45,7 @@ Installation
 
 ### As a dependency via [clib](https://github.com/clibs/clib)
 
-`clib install thlorenz/gumbo-parser`
+`clib install thlorenz/gumbo-parser.c`
 
 ### Traditional Install
 
