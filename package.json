@@ -35,7 +35,7 @@
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git://github.com/thlorenz/gumbo-parser.git"
+    "url": "git://github.com/thlorenz/gumbo-parser.c.git"
   },
   "keywords": [
     "parse",
@@ -47,6 +47,6 @@
   "license": "Apache License, Version 2.0",
   "gypfile": true,
   "bugs": {
-    "url": "https://github.com/thlorenz/gumbo-parser/issues"
+    "url": "https://github.com/thlorenz/gumbo-parser.c/issues"
   }
 }
