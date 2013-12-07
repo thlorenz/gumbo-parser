@@ -37,6 +37,7 @@
     "type": "git",
     "url": "git://github.com/thlorenz/gumbo-parser.c.git"
   },
+  "repo": "thlorenz/gumbo-parser.c",
   "keywords": [
     "parse",
     "html",
