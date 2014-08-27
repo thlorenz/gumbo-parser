@@ -14,7 +14,6 @@
 #
 
 """Adapter between Gumbo and BeautifulSoup.
-
 This parses an HTML document and gives back a BeautifulSoup object, which you
 can then manipulate like a normal BeautifulSoup parse tree.
 """
@@ -82,7 +81,6 @@ _HANDLERS = [
     _add_text(BeautifulSoup.CData),
     _add_text(BeautifulSoup.Comment),
     _add_text(BeautifulSoup.NavigableString),
-    _add_element,
     ]
 
 
