@@ -1035,7 +1035,7 @@ static GumboNode* create_element_from_token(
   element->original_tag = token->original_text;
   element->start_pos = token->position;
   element->original_end_tag = kGumboEmptyString;
-  element->end_pos = kGumboEmptySourcePo[Osition;
+  element->end_pos = kGumboEmptySourcePosition;
 
   // The element takes ownership of the attributes from the token, so any
   // allocated-memory fields should be nulled out.
