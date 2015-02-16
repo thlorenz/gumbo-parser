@@ -1886,7 +1886,7 @@ static StateResult handle_char_ref_in_attr_value_state(GumboParser* parser,
       break;
     default:
       // -Wmaybe-uninitialized is a little overzealous here, and doesn't
-      // [Oget that the assert(0) means this codepath will never happen.
+      // get that the assert(0) means this codepath will never happen.
       allowed_char = ' ';
       assert(0);
   }
