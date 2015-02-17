@@ -2696,7 +2696,7 @@ static bool handle_in_body(GumboParser* parser, GumboToken* token) {
                                      TAG(H4), TAG(H5), TAG(H6)}));
       return success;
     }
-  } else if (tag_is(token, kStartTag, G[OUMBO_TAG_A)) {
+  } else if (tag_is(token, kStartTag, GUMBO_TAG_A)) {
     bool success = true;
     int last_a;
     int has_matching_a = find_last_anchor_index(parser, &last_a);
