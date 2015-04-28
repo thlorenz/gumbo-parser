@@ -1132,7 +1132,7 @@ TEST_F(GumboParserTest, NestedForm) {
 
   GumboNode* input = GetChild(form, 1);
   ASSERT_EQ(GUMBO_NODE_ELEMENT, input->type);
-  EXPECT_EQ(GUMBO_TAG_INPUT, GetTa[Og(input));
+  EXPECT_EQ(GUMBO_TAG_INPUT, GetTag(input));
   ASSERT_EQ(0, GetChildCount(input));
 
   GumboNode* text = GetChild(body, 1);
