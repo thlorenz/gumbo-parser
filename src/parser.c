@@ -848,6 +848,7 @@ static void append_node(
 // "parent" and "index_within_parent" fields of it and all its siblings.
 // If the index of the location is -1, this calls append_node.
 static void insert_node(
+<<<<<<< HEAD
     GumboParser* parser, GumboNode* node, InsertionLocation location) {
   assert(node->parent == NULL);
   assert(node->index_within_parent == -1);
@@ -864,6 +865,24 @@ static void insert_node(
     } else {
       assert(0);
     }
+=======
+    GumboParser* parser, GumboNode* parent, unsigned int index, GumboNode* node) {
+  assert(node->parent == NULL);
+  assert(node->index_within_parent == -1);
+  assert(parent->type == GUMBO_NODE_ELEMENT);
+  GumboVector* children = &parent->v.element.children;
+  assert(index < children->length);
+  node->parent = parent;
+  node->index_within_parent = index;
+  gumbo_vector_insert_at(parser, (void*) node, index, children);
+  assert(node->index_within_parent < children->length);
+  for (unsigned int i = index + 1; i < children->length; ++i) {
+    GumboNode* sibling = children->data[i];
+    sibling->index_within_parent = i;
+    assert(sibling->index_within_parent < children->length);
+  }
+}
+>>>>>>> c3c9a67 (Additional signed/unsigned fixes for Visual Studio.)
 
     assert(index >= 0);
     assert((unsigned int) index < children->length);
@@ -1793,6 +1812,7 @@ static bool adoption_agency_algorithm(
     GumboParser* parser, GumboToken* token, GumboTag subject) {
   GumboParserState* state = parser->_parser_state;
   gumbo_debug("Entering adoption agency algorithm.\n");
+<<<<<<< HEAD
   // Step 1.
   GumboNode* current_node = get_current_node(parser);
   if (current_node->v.element.tag_namespace == GUMBO_NAMESPACE_HTML &&
@@ -1805,6 +1825,11 @@ static bool adoption_agency_algorithm(
   // Steps 2-4 & 20:
   for (unsigned int i = 0; i < 8; ++i) {
     // Step 5.
+=======
+  // Steps 1-3 & 16:
+  for (unsigned int i = 0; i < 8; ++i) {
+    // Step 4.
+>>>>>>> c3c9a67 (Additional signed/unsigned fixes for Visual Studio.)
     GumboNode* formatting_node = NULL;
     int formatting_node_in_open_elements = -1;
     for (int j = state->_active_formatting_elements.length; --j >= 0;) {
@@ -1957,7 +1982,10 @@ static bool adoption_agency_algorithm(
       // Step 13.8.
       if (last_node == furthest_block) {
         bookmark = formatting_index + 1;
+<<<<<<< HEAD
         gumbo_debug("Bookmark moved to %d.\n", bookmark);
+=======
+>>>>>>> c3c9a67 (Additional signed/unsigned fixes for Visual Studio.)
         assert((unsigned int) bookmark <= state->_active_formatting_elements.length);
       }
       // Step 13.9.
